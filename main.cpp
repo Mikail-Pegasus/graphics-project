@@ -50,12 +50,12 @@ const GLfloat light_r[]={20.0f};
 const GLfloat light_ambient[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
 const GLfloat light_diffuse[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
 const GLfloat light_specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-const GLfloat light_position[] = { 100.0f, 100.0f, -100.0f, 0.0f };
+const GLfloat light_position[] = { 100.0f, 100.0f, 100.0f, 0.0f };
 
 const GLfloat light_ambient1[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
 const GLfloat light_diffuse1[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
 const GLfloat light_specular1[] = { 1.0f, 1.0f, 1.0f, 1.0f };
-const GLfloat light_position1[] = { 0.0f, 0.0f, -15.0f, 1.0f };
+const GLfloat light_position1[] = { 0.0f, 0.0f, 15.0f, 1.0f };
 
 
 const GLfloat light_ambient2[]  = { 0.5f, 0.5f, 0.5f, 1.0f };
