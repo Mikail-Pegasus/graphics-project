@@ -296,12 +296,12 @@ void pic()
     glBegin(GL_QUADS);
     glTexCoord2f(0,0);
     glVertex2f(0,0);
-    glTexCoord2f(2,0);
-    glVertex2f(2,0);
-    glTexCoord2f(2,2);
-    glVertex2f(2,2);
-    glTexCoord2f(0,2);
-    glVertex2f(0,2);
+    glTexCoord2f(1,0);
+    glVertex2f(1,0);
+    glTexCoord2f(1,1);
+    glVertex2f(1,1);
+    glTexCoord2f(0,1);
+    glVertex2f(0,1);
     glEnd();
 }
 
@@ -310,40 +310,40 @@ void cube()
     glBegin(GL_QUADS);
 
     //p1
-    glVertex3f(0.0,10.0,10.0);
-    glVertex3f(0.0,0.0,10.0);
-    glVertex3f(10.0,0.0,10.0);
-    glVertex3f(10.0,10.0,10.0);
+    glVertex3f(0.0,1.0,1.0);
+    glVertex3f(0.0,0.0,1.0);
+    glVertex3f(1.0,0.0,1.0);
+    glVertex3f(1.0,1.0,1.0);
 
     //p2
-    glVertex3f(10.0,10.0,10.0);
-    glVertex3f(10.0,0.0,10.0);
-    glVertex3f(10.0,0.0,0.0);
-    glVertex3f(10.0,10.0,0.0);
+    glVertex3f(1.0,1.0,1.0);
+    glVertex3f(1.0,0.0,1.0);
+    glVertex3f(1.0,0.0,0.0);
+    glVertex3f(1.0,1.0,0.0);
 
     //p3
-    glVertex3f(0.0,10.0,0.0);
-    glVertex3f(0.0,10.0,10.0);
-    glVertex3f(10.0,10.0,10.0);
-    glVertex3f(10.0,10.0,0.0);
+    glVertex3f(0.0,1.0,0.0);
+    glVertex3f(0.0,1.0,1.0);
+    glVertex3f(1.0,1.0,1.0);
+    glVertex3f(1.0,1.0,0.0);
 
     //p4
-    glVertex3f(0.0,10.0,0.0);
-    glVertex3f(10.0,10.0,0.0);
-    glVertex3f(10.0,0.0,0.0);
+    glVertex3f(0.0,1.0,0.0);
+    glVertex3f(1.0,1.0,0.0);
+    glVertex3f(1.0,0.0,0.0);
     glVertex3f(0.0,0.0,0.0);
 
     //p5
-    glVertex3f(0.0,10.0,0.0);
+    glVertex3f(0.0,1.0,0.0);
     glVertex3f(0.0,0.0,0.0);
-    glVertex3f(0.0,0.0,10.0);
-    glVertex3f(0.0,10.0,10.0);
+    glVertex3f(0.0,0.0,1.0);
+    glVertex3f(0.0,1.0,1.0);
 
     //p6
     glVertex3f(0.0,0.0,0.0);
-    glVertex3f(10.0,0.0,0.0);
-    glVertex3f(10.0,0.0,10.0);
-    glVertex3f(0.0,0.0,10.0);
+    glVertex3f(1.0,0.0,0.0);
+    glVertex3f(1.0,0.0,1.0);
+    glVertex3f(0.0,0.0,1.0);
 
     glEnd();
 }
@@ -353,7 +353,7 @@ void car()
     //Lower part
     glPushMatrix();
     glTranslated(1,1,1);
-    glScaled(1.5,.3,.75);
+    glScaled(15,3,7.5);
     glBindTexture(GL_TEXTURE_2D,6);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -363,7 +363,7 @@ void car()
     //Upper part
     glPushMatrix();
     glTranslated(5,4,1.5);
-    glScaled(.7,.3,.65);
+    glScaled(7,3,6.5);
     glBindTexture(GL_TEXTURE_2D,6);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -373,7 +373,7 @@ void car()
     //Glass 1
     glPushMatrix();
     glTranslated(5.5,4,8);
-    glScaled(.6,.25,.05);
+    glScaled(6,2.5,.5);
     glBindTexture(GL_TEXTURE_2D,8);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -383,7 +383,7 @@ void car()
     //Glass 2
     glPushMatrix();
     glTranslated(5.5,4,1);
-    glScaled(.6,.25,.05);
+    glScaled(6,2.5,.5);
     glBindTexture(GL_TEXTURE_2D,8);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -393,7 +393,7 @@ void car()
     //Glass 3
     glPushMatrix();
     glTranslated(4.5,4,2);
-    glScaled(.05,.25,.55);
+    glScaled(.5,2.5,5.5);
     glBindTexture(GL_TEXTURE_2D,8);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -403,7 +403,7 @@ void car()
     //Glass 4
     glPushMatrix();
     glTranslated(12,4,2);
-    glScaled(.05,.25,.55);
+    glScaled(.5,2.5,5.5);
     glBindTexture(GL_TEXTURE_2D,8);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -413,7 +413,7 @@ void car()
     //Front lower part
     glPushMatrix();
     glTranslated(16,1,1.5);
-    glScaled(.05,.1,.65);
+    glScaled(.5,1,6.5);
     glBindTexture(GL_TEXTURE_2D,6);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -423,7 +423,7 @@ void car()
     //Back lower part
     glPushMatrix();
     glTranslated(.5,1,1.5);
-    glScaled(.05,.1,.65);
+    glScaled(.5,1,6.5);
     glBindTexture(GL_TEXTURE_2D,6);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -433,7 +433,7 @@ void car()
     //Back upper part
     glPushMatrix();
     glTranslated(.5,3,1.5);
-    glScaled(.05,.05,.65);
+    glScaled(.5,.5,6.5);
     glBindTexture(GL_TEXTURE_2D,6);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -524,7 +524,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_carbody);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_carbody);
     glTranslated(1,1,1);
-    glScaled(1.5,.3,.75);
+    glScaled(15,3,7.5);
     cube();
     glPopMatrix();
 
@@ -535,7 +535,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_carbody);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_carbody);
     glTranslated(5,4,1.5);
-    glScaled(.7,.3,.65);
+    glScaled(7,3,6.5);
     cube();
     glPopMatrix();
 
@@ -546,7 +546,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_glass);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_glass);
     glTranslated(5.5,4,8);
-    glScaled(.6,.25,.05);
+    glScaled(6,2.5,.5);
     cube();
     glPopMatrix();
 
@@ -557,7 +557,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_glass);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_glass);
     glTranslated(5.5,4,1);
-    glScaled(.6,.25,.05);
+    glScaled(6,2.5,.5);
     cube();
     glPopMatrix();
 
@@ -568,7 +568,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_glass);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_glass);
     glTranslated(4.5,4,2);
-    glScaled(.05,.25,.55);
+    glScaled(.5,2.5,5.5);
     cube();
     glPopMatrix();
 
@@ -579,7 +579,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_glass);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_glass);
     glTranslated(12,4,2);
-    glScaled(.05,.25,.55);
+    glScaled(.5,2.5,5.5);
     cube();
     glPopMatrix();
 
@@ -590,7 +590,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_carbody);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_carbody);
     glTranslated(16,1,1.5);
-    glScaled(.05,.1,.65);
+    glScaled(.5,1,6.5);
     cube();
     glPopMatrix();
 
@@ -601,7 +601,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_carbody);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_carbody);
     glTranslated(.5,1,1.5);
-    glScaled(.05,.1,.65);
+    glScaled(.5,1,6.5);
     cube();
     glPopMatrix();
 
@@ -612,7 +612,7 @@ void carv2()
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_carbody);
     glMaterialfv(GL_FRONT, GL_SHININESS, high_shininess_carbody);
     glTranslated(.5,3,1.5);
-    glScaled(.05,.05,.65);
+    glScaled(.5,.5,6.5);
     cube();
     glPopMatrix();
 
@@ -734,28 +734,28 @@ void table()
     glPushMatrix();
     glTranslated(25,16,25);
     glRotated(-90,0,0,1);
-    glScaled(.1,5,5);
+    glScaled(1,50,50);
     cube();
     glPopMatrix();
 
     //Table leg 1
     glPushMatrix();
     glTranslated(30,2,30);
-    glScaled(.1,1.3,.1);
+    glScaled(1,13,1);
     cube();
     glPopMatrix();
 
     //Table leg 2
     glPushMatrix();
     glTranslated(70,2,30);
-    glScaled(.1,1.3,.1);
+    glScaled(1,13,1);
     cube();
     glPopMatrix();
 
     //Table leg 3
     glPushMatrix();
     glTranslated(30,2,70);
-    glScaled(.1,1.3,.1);
+    glScaled(1,13,1);
     cube();
     glPopMatrix();
 
@@ -763,7 +763,7 @@ void table()
     glPushMatrix();
     glColor3d(0,1,1);
     glTranslated(70,2,70);
-    glScaled(.1,1.3,.1);
+    glScaled(1,13,1);
     cube();
     glPopMatrix();
 }
@@ -778,7 +778,7 @@ void stage()
     glPushMatrix();
     glTranslated(0,2,0);
     glRotated(90,1,0,0);
-    glScaled(10,10,.2);
+    glScaled(100,100,2);
     glBindTexture(GL_TEXTURE_2D,5);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -789,7 +789,7 @@ void stage()
     glPushMatrix();
     glTranslated(2,2,0);
     glRotated(-90,0,1,0);
-    glScaled(10,5,.2);
+    glScaled(100,50,2);
     glBindTexture(GL_TEXTURE_2D,3);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -801,7 +801,7 @@ void stage()
     glBindTexture(GL_TEXTURE_2D,10);
 	glEnable(GL_TEXTURE_2D);
 	glTranslated(30,30,5);
-    glScaled(10,10,0);
+    glScaled(20,20,0);
     pic();
     glDisable(GL_TEXTURE_2D);
     glPopMatrix();
@@ -809,7 +809,7 @@ void stage()
     //Wall 2
     glPushMatrix();
     glTranslated(2,2,0);
-    glScaled(9.8,5,.2);
+    glScaled(98,50,2);
     glBindTexture(GL_TEXTURE_2D,3);
 	glEnable(GL_TEXTURE_2D);
     cube();
@@ -885,7 +885,7 @@ void stagev2()
     glPushMatrix();
     glTranslated(0,2,0);
     glRotated(90,1,0,0);
-    glScaled(10,10,.2);
+    glScaled(100,100,2);
     glMaterialfv(GL_FRONT, GL_AMBIENT,   mat_ambient_floor);
     glMaterialfv(GL_FRONT, GL_DIFFUSE,   mat_diffuse_floor);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_floor);
@@ -897,7 +897,7 @@ void stagev2()
     glPushMatrix();
     glTranslated(2,2,0);
     glRotated(-90,0,1,0);
-    glScaled(10,5,.2);
+    glScaled(100,50,2);
     glMaterialfv(GL_FRONT, GL_AMBIENT,   mat_ambient_wall);
     glMaterialfv(GL_FRONT, GL_DIFFUSE,   mat_diffuse_wall);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_wall);
@@ -908,7 +908,7 @@ void stagev2()
     //Wall 2
     glPushMatrix();
     glTranslated(2,2,0);
-    glScaled(9.8,5,.2);
+    glScaled(98,50,2);
     glMaterialfv(GL_FRONT, GL_AMBIENT,   mat_ambient_wall);
     glMaterialfv(GL_FRONT, GL_DIFFUSE,   mat_diffuse_wall);
     glMaterialfv(GL_FRONT, GL_SPECULAR,  mat_specular_wall);
